@@ -1,14 +1,14 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose'); // Import the Mongoose library
 
-
+// Define a schema for the User model
 const userSchema = new mongoose.Schema({
-    username:String,
-    email:String,
-    password:String,
+    username: String, // Field for storing the username
+    email: String,    // Field for storing the email
+    password: String, // Field for storing the password
+});
 
-    
-})
-const userModel = mongoose.model('User', userSchema)
+// Create a Mongoose model named 'User' using the defined schema
+const userModel = mongoose.model('User', userSchema);
 
-
-module.exports = userModel
+// Export the userModel so it can be used in other parts of the application
+module.exports = userModel;
