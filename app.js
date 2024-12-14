@@ -50,6 +50,26 @@ app.get('/get-users', (req, res) => {
         res.send(user)
     })
 })
+
+
+app.get('/update-user', async (req, res) => {
+    await userModel.findOneAndUpdate({
+        username: "a"
+        }, {
+            email:"c@gyg.com"
+        })
+        res.send("user update")
+    })
+
+app.get('/delete-user', async(req, res) =>{
+       await userModel.findOneAndDelete({
+        username: "a"
+       })
+       res.send("user deleted")}
+    
+    )    
+
+
 app.post('/get-form-data', (req, res) => {
     console.log(req.body);
 
