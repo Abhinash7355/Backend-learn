@@ -44,10 +44,10 @@ app.post('/register', async (req, res) => {
 })
 
 app.get('/get-users', (req, res) => {
-    userModel.find({
-        username: 'b'
-    }).then((users) => {
-        res.send(users)
+    userModel.findOne({
+        username:"a"
+    }).then((user) => {
+        res.send(user)
     })
 })
 app.post('/get-form-data', (req, res) => {
